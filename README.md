@@ -66,7 +66,7 @@ Outpur of Helm
    TEST SUITE: None
    ```
    
-    ```sh
+   ```sh
    $ helm install app app/	
    NAME: app
    LAST DEPLOYED: Sun Feb 14 23:14:33 2021
@@ -89,5 +89,4 @@ Outpur of Helm
    kubernetes           ClusterIP      10.100.0.1      <none>                                                                   443/TCP        19h
    wikiapp-svc          LoadBalancer   10.100.190.48   XXXXXXXXX-965296802.us-east-X.elb.amazonaws.com   80:32298/TCP   4m52s
    wikidb-svc           ClusterIP      10.100.26.164   <none>                                                                   3306/TCP       4m21s
-       
    ```
