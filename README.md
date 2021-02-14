@@ -41,7 +41,12 @@ This project is to install MediaWiki by Helm
    helm install app app/
    helm install mysql mysql/
    ```
-6. Create CNAME records with LB
+6. Import initial DB to mysql node
+   ```sh
+   kubectl  exec -i wikidb-XXXXX-xfnhr -- mysql -u root -pyourpass -e 'create database wikidatabase'
+   kubectl  exec -i wikidb-xxxxx-rgpgm -- mysql -u root -pyourpass wikidatabase < my_wiki.sql
+   ```
+7. Create CNAME records with LB
    ymediwiki.yourserver.com CNAME yourawslb-785522508.us-east-X.elb.amazonaws.com
 
 <!-- USAGE EXAMPLES -->
