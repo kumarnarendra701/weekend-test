@@ -1,0 +1,22 @@
+mysql:
+  appname: wikidb
+  appnamesvc: wikidb-svc
+  tolerations: {}
+  labels: wikidb
+  namespace: weekend-test
+  image:
+    name: mysql
+    tag: "5.6"
+    pullPolicy: IfNotPresent
+  rootPassword: wikipass
+  persistence:
+    enabled: false
+    pvcName: mysql-data-pvc
+
+mysqlStorage:
+  appName: wikidb
+  nameSpace: weekend-test
+  storageClassName: mysql-data-sc
+  pvcName: mysql-data-pvc
+  pvPath: /mysql-data
+  capacity: 5Gi

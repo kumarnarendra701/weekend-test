@@ -1,0 +1,8 @@
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: {{ .Values.mysqlStorage.storageClassName }}
+  labels:
+    app: {{ .Values.mysqlStorage.storageClassName}}
+provisioner: ebs.csi.aws.com
+volumeBindingMode: WaitForFirstConsumer
