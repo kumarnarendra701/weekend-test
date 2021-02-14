@@ -54,7 +54,7 @@ This project is to install MediaWiki by Helm
 <!-- USAGE EXAMPLES -->
 ## Output of Helm and Service
 
- ```sh
+   ```sh
    $ helm install mysql mysql/
    NAME: mysql
    LAST DEPLOYED: Sun Feb 14 23:14:56 2021
