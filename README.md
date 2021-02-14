@@ -1,1 +1,50 @@
-# weekend-test
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This project is to install MediaWiki by Helm
+### Built With
+* [Docker]
+* [Kubernetes]
+* [Helm]
+
+### Prerequisites
+
+* AWS EKS Cluster
+* EBS driver installed
+* kubectl and Helm installed
+* Valid kubeconfig file
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Docker build and Push
+   ```sh
+   sudo docker login
+   sudo docker build -t hometest-wiki:latest .
+   sudo docker tag hometest-wiki:latest yourdockerrepo/hometest-wiki:latest
+   sudo docker push yourdockerrepo/hometest-wiki:latest
+   ```
+4. Change MediaWiki url,dbuser,dbpassword,dbname in LocalSettings.php file
+   ```sh
+   $wgServer = "http://ymediwiki.yourserver.com";
+   $wgSitename = "Take Home Test from ThoughtWorks";
+   $wgDBserver = "mysql-service-name";
+   $wgDBname = "wikidatabase";
+   $wgDBuser = "root";
+   $wgDBpassword = "yourpass";
+   ```
+5. Execute Helm for app and db
+   ```sh
+   cd weekend-test/
+   helm install app app/
+   helm install mysql mysql/
+   ```
+6. Create CNAME records with LB
+   ymediwiki.yourserver.com CNAME yourawslb-785522508.us-east-X.elb.amazonaws.com
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
