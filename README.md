@@ -51,6 +51,8 @@ This project is to install MediaWiki by Helm
 7. Create CNAME records with LB
    
    mediwiki.yourserver.com CNAME yourawslb-785522508.us-east-X.elb.amazonaws.com
+   
+   Your mediwiki sites is avilable on http://mediwiki.yourserver.com
 
 <!-- USAGE EXAMPLES -->
 ## Output of Helm and Service
