@@ -35,7 +35,7 @@ This project is to install MediaWiki by Helm
    $wgDBuser = "root";
    $wgDBpassword = "yourpass";
    ```
-   Note - Allso chnage same db password into Mysql chart value file,so that db server will initilized by same password.
+   Note - Put same DB password and service name into Mysql chart value file, so that DB node will be initialized by same credenatils.
    
 5. Execute Helm for app and db
    ```sh
