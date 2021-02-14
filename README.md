@@ -52,6 +52,42 @@ This project is to install MediaWiki by Helm
    ymediwiki.yourserver.com CNAME yourawslb-785522508.us-east-X.elb.amazonaws.com
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Output
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Outpur of Helm
+
+ ```sh
+   $ helm install mysql mysql/
+   NAME: mysql
+   LAST DEPLOYED: Sun Feb 14 23:14:56 2021
+   NAMESPACE: default
+   STATUS: deployed
+   REVISION: 1
+   TEST SUITE: None
+   ```
+   
+    ```sh
+   $ helm install app app/	
+   NAME: app
+   LAST DEPLOYED: Sun Feb 14 23:14:33 2021
+   NAMESPACE: default
+   STATUS: deployed
+   REVISION: 1
+   TEST SUITE: None
+   ```
+   
+   ```sh
+   $ helm list
+   NAME 	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART      	APP VERSION
+   app  	default  	1       	2021-02-14 23:14:33.196064411 +0530 IST	deployed	app-1.0.0  	1.16.0     
+   mysql	default  	1       	2021-02-14 23:14:56.87092987 +0530 IST 	deployed	mysql-1.0.0	          
+   ```
+   
+   ```sh
+   $ kubectl get svc
+   NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP                                                              PORT(S)        AGE
+   kubernetes           ClusterIP      10.100.0.1      <none>                                                                   443/TCP        19h
+   wikiapp-svc          LoadBalancer   10.100.190.48   XXXXXXXXX-965296802.us-east-X.elb.amazonaws.com   80:32298/TCP   4m52s
+   wikidb-svc           ClusterIP      10.100.26.164   <none>                                                                   3306/TCP       4m21s
+       
+   ```
