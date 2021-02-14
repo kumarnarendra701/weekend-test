@@ -49,6 +49,7 @@ This project is to install MediaWiki by Helm
    kubectl  exec -i wikidb-xxxxx-rgpgm -- mysql -u root -pyourpass wikidatabase < my_wiki.sql
    ```
 7. Create CNAME records with LB
+   
    ymediwiki.yourserver.com CNAME yourawslb-785522508.us-east-X.elb.amazonaws.com
 
 <!-- USAGE EXAMPLES -->
