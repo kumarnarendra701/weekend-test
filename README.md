@@ -55,7 +55,7 @@ This project is to install MediaWiki by Helm
    Your mediwiki sites is avilable on http://mediwiki.yourserver.com
 
 <!-- USAGE EXAMPLES -->
-## Output of Helm and Service
+## Output of Helm and Service cmd
 
    ```sh
    $ helm install mysql mysql/
