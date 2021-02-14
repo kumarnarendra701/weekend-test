@@ -1,7 +1,7 @@
 mediaWiki:
  namespace: weekend-test
  appname: wikiapp
- replicCount: 1
+ replicCount: 2
  port: 80
  wikiImage: kumarnarendra701/hometest-wiki:latest
  servicename: wikiapp-svc
