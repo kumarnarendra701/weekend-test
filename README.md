@@ -17,7 +17,7 @@ This project is to install MediaWiki by Helm
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/kumarnarendra701/weekend-test.git
    ```
 3. Docker build and Push
    ```sh
