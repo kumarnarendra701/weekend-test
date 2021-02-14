@@ -28,7 +28,7 @@ This project is to install MediaWiki by Helm
    ```
 4. Change MediaWiki url,dbuser,dbpassword,dbname in LocalSettings.php file
    ```sh
-   $wgServer = "http://ymediwiki.yourserver.com";
+   $wgServer = "http://mediwiki.yourserver.com";
    $wgSitename = "Take Home Test from ThoughtWorks";
    $wgDBserver = "mysql-service-name";
    $wgDBname = "wikidatabase";
